@@ -19,11 +19,6 @@ public class MailService {
 	public void sendMail( String strTo ) {
 		// 받는사람을 담을 변수 선언
 		String to = strTo;
-		/*
-		 * flag = 0 실패
-		 * flag = 1 성공
-		 * */
-		int flag = 0;
 		
 		try {
 			// 텍스트로 구성된 메일을 생성할때
@@ -44,7 +39,6 @@ public class MailService {
 			System.out.println(javaMailSender);
 			// 메일 발송
 			javaMailSender.send(simpleMessage);
-			flag = 1;
 		} catch (MailException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
