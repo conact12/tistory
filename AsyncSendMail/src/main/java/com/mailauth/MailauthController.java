@@ -27,7 +27,7 @@ public class MailauthController {
 	@RequestMapping( "/mail_ok.do" )
 	public ModelAndView mail_ok(HttpServletRequest req) {
 		System.out.println( "mail_ok() 호출" );
-	    ms.sendMail( req.getParameter( "email" ) );
+		ms.sendMail( req.getParameter( "email" ) );
 		
 		ModelAndView modelAndView = new ModelAndView( "mail_ok" );
 		return modelAndView;
